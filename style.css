@@ -1,0 +1,48 @@
+/* {}앞에 붙은 html의 약어 부분으로 한번에 다룰수 있음
+{}를 selector(선택자)라고 부른다 어느 곳에 효과를 줄지 선택
+*는 모든 구역을 의미*/
+  body{
+    margin: 0;
+  }
+  a{
+    color: black;
+    text-decoration: none;
+  }
+  h1{
+    font-size:45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+  }
+  .chating{
+    padding: 30px;
+  }
+  #grid ol{ /*grid에 포함된 ol테크*/
+    border-right: 1px solid gray;
+    width: 80px;
+    margin:0;
+    padding: 20px;
+  }
+  #grid{
+    display: grid;
+    grid-template-columns: 140px 1fr;
+  }
+  #article{
+    padding-left: 30px;
+  }
+  /*800px보다 작으면 1칸으로 변 */
+  @media (max-width:800px) {
+    #grid{
+      display: block;
+      grid-template-columns: 140px 1fr;
+      padding: 30px;
+      padding-top: 0;
+      margin:0;
+    }
+
+    #grid ol{
+      border:none;
+      padding: 30px;
+    }
+  }
